@@ -1,0 +1,10 @@
+@import './form-elemts/buttons.scss';
+@import './utils/vars.scss';
+
+.head-content {
+  .head-info {
+    @include download-button;
+    @include get-button;
+  }
+}
+

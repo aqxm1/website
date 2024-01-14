@@ -1,0 +1,12 @@
+{
+  "scripts": {
+    "watch": "grunt watch"
+  },
+  "devDependencies": {
+    "grunt": "^1.6.1",
+    "grunt-contrib-cssmin": "^5.0.0",
+    "grunt-contrib-sass": "^2.0.0",
+    "grunt-contrib-watch": "^1.1.0",
+    "scss": "^0.2.4"
+  }
+}
