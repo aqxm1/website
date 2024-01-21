@@ -1,3 +1,6 @@
+.head-content .head-info {
+  background-color: red;
+}
 .head-content .head-info .download-button {
   background-color: white;
   color: grey;

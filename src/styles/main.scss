@@ -3,6 +3,7 @@
 
 .head-content {
   .head-info {
+    background-color: red;
     @include download-button;
     @include get-button;
   }
