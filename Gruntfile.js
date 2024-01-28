@@ -8,7 +8,7 @@ module.exports = function(grunt) {
     sass: {
       dist: {
         files: {
-          'src/styles/main.css': 'src/styles/main.scss'
+          'www/assets/styles/main.css': 'src/assets/styles/main.scss'
         }
       }
     },
@@ -20,7 +20,7 @@ module.exports = function(grunt) {
       },
       target: {
         files: {
-          'src/styles/main.min.css': 'src/styles/main.css'
+          'www/assets/styles/main.min.css': 'www/assets/styles/main.css'
         }
       }
     },
@@ -30,17 +30,53 @@ module.exports = function(grunt) {
       options: {
         banner: '/! <%= pkg.name %> <%= grunt.template.today("yyyy-mm-dd") %>/\n'
       },
-      build: {
-        src: 'src/scripts/**/*.js', //source files to be minified
-        dest: 'src/scripts/dist/<%= pkg.name %>main.min.js' //destination for minified files
+      main: {
+        expand: true,
+        cwd: 'src/assets/scripts/',
+        src: ['**/*.js'],
+        dest: 'www/assets/scripts/',
+        ext: '.min.js'
+      },
+      pages: {
+        expand: true,
+        cwd: 'src/pages/',
+        src: ['**/*.js'],
+        dest: 'www/pages/',
+        ext: '.min.js'
+      }
+    },    
+    
+
+    // Minify HTML
+    htmlmin: {
+      indexDist: {
+        options: {
+          removeComments: true,
+          collapseWhitespace: true
+        },
+        files: {
+          'www/index.html': 'src/index.html',
+        }
+      },
+
+      pagesDist: {
+        options: {
+          removeComments: true,
+          collapseWhitespace: true
+        },
+        expand: true,
+        cwd: 'src/pages/', // Source directory
+        src: ['**/*.html'], // Match all HTML files
+        dest: 'www/pages/', // Destination directory
+        ext: '.html' // Minified file extension
       }
     },
 
     // Watch for changes and run tasks
     watch: {
       styles: {
-        files: ['src/styles/**/*.scss','src/scripts/**/*.js'],
-        tasks: ['sass','uglify','cssmin'],
+        files: ['src/assets/styles/**/*.scss','src/assets/scripts/**/*.js','src/**/*.html'],
+        tasks: ['sass','uglify','htmlmin','cssmin'],
         options: {
           spawn: false,
         },
@@ -52,8 +88,9 @@ module.exports = function(grunt) {
   grunt.loadNpmTasks('grunt-contrib-sass');
   grunt.loadNpmTasks('grunt-contrib-cssmin');
   grunt.loadNpmTasks('grunt-contrib-uglify');
+  grunt.loadNpmTasks('grunt-contrib-htmlmin');
   grunt.loadNpmTasks('grunt-contrib-watch');
 
   // Default task(s)
-  grunt.registerTask('default', ['sass','uglify','cssmin']);
+  grunt.registerTask('default', ['sass','uglify','htmlmin','cssmin']);
 };

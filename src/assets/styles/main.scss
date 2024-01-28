@@ -1,0 +1,12 @@
+@import './form-elemts/buttons.scss';
+@import './utils/vars.scss';
+
+.head-bar {
+  width: 100%;
+  background-color: blue;
+  h1 {
+    font-size: 30px;
+    color: green;
+  }
+}
+

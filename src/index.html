@@ -6,26 +6,18 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Adams Website</title>
 
-    <link rel="stylesheet" href="./styles/main.min.css">
-    <script src="./scripts/dist/main.min.js"></script>
+    <link rel="stylesheet" href="./assets/styles/main.min.css">
+    <script src="./assets/scripts/main.min.js" type="module"></script>
   </head>
   <body>
-    <div class="head-content">
-      <div class="head-text">
-        <h1>Ich bin eine Überschrift!</h1>
-        <h1>Ich teste den container!</h1>
+    <div class="main-frame">
+      <div class="head-bar">
+        <h1>Adam Maksajdowski</h1>
       </div>
-      <div class="head-info">
-        <button class="get-button">
-          Get started
-        </button>
-        
-        <button class="download-button">
-          Download
-        </button>
+      <div class="dynamic-content">
+        <router-outlet></router-outlet>
       </div>
+      <div class="footer-bar"></div>
     </div>
-
-
   </body>
 </html>
