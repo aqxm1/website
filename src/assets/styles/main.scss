@@ -5,6 +5,31 @@
 @import '../../pages/dashboard/dashboard.scss';
 
 
+body {
+
+}
+
+.main-frame {
+  width: 100%;
+  height: 100%;
+  padding: 60px 0 60px 0;
+
+  .head-bar {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100px;
+  }
+
+  .footer-bar {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 80px;
+  }
+}
 
 .head-bar {
   font-family: 'Montserrat', sans-serif;
