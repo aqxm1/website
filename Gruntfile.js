@@ -44,8 +44,7 @@ module.exports = function(grunt) {
         dest: 'www/pages/',
         ext: '.min.js'
       }
-    },    
-    
+    },
 
     // Minify HTML
     htmlmin: {
@@ -72,11 +71,21 @@ module.exports = function(grunt) {
       }
     },
 
+    // Copy files
+    copy: {
+      main: {
+        expand: true,
+        cwd: 'src/assets/styles/img',
+        src: '**/*',
+        dest: 'www/assets/styles/img'
+      }
+    },
+
     // Watch for changes and run tasks
     watch: {
       styles: {
-        files: ['src/assets/styles/**/*.scss','src/assets/scripts/**/*.js','src/**/*.html'],
-        tasks: ['sass','uglify','htmlmin','cssmin'],
+        files: ['src/assets/styles/**/*.scss','src/assets/scripts/**/*.js','src/**/*.html','src/pages/**/*.scss'],
+        tasks: ['sass','uglify','htmlmin','cssmin', 'copy'],
         options: {
           spawn: false,
         },
@@ -90,7 +99,8 @@ module.exports = function(grunt) {
   grunt.loadNpmTasks('grunt-contrib-uglify');
   grunt.loadNpmTasks('grunt-contrib-htmlmin');
   grunt.loadNpmTasks('grunt-contrib-watch');
+  grunt.loadNpmTasks('grunt-contrib-copy');
 
   // Default task(s)
-  grunt.registerTask('default', ['sass','uglify','htmlmin','cssmin']);
+  grunt.registerTask('default', ['sass','uglify','htmlmin','cssmin', 'copy']);
 };

@@ -4,7 +4,12 @@
     <meta charset="utf-8">
     <meta http-equiv="x-ua-compatible">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
     <title>Adams Website</title>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500&display=swap" rel="stylesheet">
 
     <link rel="stylesheet" href="./assets/styles/main.min.css">
     <script src="./assets/scripts/main.min.js" type="module"></script>
@@ -12,7 +17,11 @@
   <body>
     <div class="main-frame">
       <div class="head-bar">
-        <h1>Adam Maksajdowski</h1>
+        <div class="name-logo-container">
+          <h1>Adam Maksajdowski</h1>
+          <div class="logo"></div>
+        </div>
+        <div class="menu"></div>
       </div>
       <div class="dynamic-content">
         <router-outlet></router-outlet>

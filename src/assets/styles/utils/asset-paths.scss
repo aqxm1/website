@@ -1,0 +1,32 @@
+$logo: 'img/application_14078520.png';
+$menu: 'img/menu_8673660.png';
+$logo-hero: 'img/japan-illustration-japan-f5c864d006d1d3fb0ef186b72cf353e8.png';
+$logo-git: 'img/github-mark.png';
+
+@mixin logo {
+  background-image: url('#{$logo}');
+  background-repeat: no-repeat;
+  background-size: contain;
+  background-position: center center;
+}
+
+@mixin menu {
+  background-image: url('#{$menu}');
+  background-repeat: no-repeat;
+  background-size: contain;
+  background-position: center center;
+}
+
+@mixin logo-hero {
+  background-image: url('#{$logo-hero}');
+  background-repeat: no-repeat;
+  background-size: contain;
+  background-position: center center;
+}
+
+@mixin logo-git {
+  background-image: url('#{$logo-git}');
+  background-repeat: no-repeat;
+  background-size: 110%;
+  background-position: center center;
+}
