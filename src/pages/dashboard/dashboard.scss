@@ -1,4 +1,5 @@
 @import '../../assets/styles/utils/asset-paths.scss';
+@import '../../assets/styles/utils/reset.scss';
 
 p {
   font-family: 'Montserrat', sans-serif;
@@ -6,12 +7,9 @@ p {
 
 .hero-box {
   position: relative;
-  width: 90%;
-  max-width: 1600px;
+  width: 100%;
   height: 263px;
   background-color: #242128;
-  margin-left: auto;
-  margin-right: auto;
   border-radius: 2px;
 
   display: flex;
@@ -46,42 +44,157 @@ p {
   }
 }
 
-.grid {
+.grid {   //need to fix the responsive resize
   display: grid;
   grid-template-columns: repeat(3, 1fr);
-  justify-content: center;
+  grid-template-rows: 50% 50%;
+  grid-template-areas: 
+    "img1 img2 img3"
+    "name1 name2 name3";
 
+  gap: 10px;
+  justify-items: center;
+  align-items: start;
   position: relative;
   width: 100%;
-  height: 263px;
-
-  margin-left: 40px;
-  margin-right: 40px;
+  height: 260px;
   margin-top: 30px;
-
   background-color: lightblue;
-  
 
-  .lebenslauf{
+  .lebenslauf-img {
+    grid-area: img1;
     width: 130px;
     height: 130px;
     border-radius: 100%;
     background-color: grey;
-  }
+    cursor: pointer;
+    @include logo-lebenslauf;
+    }
 
-  .git-hub {
+    .lebenslauf-box {
+      grid-area: name1;
+      width: 380px;
+      height: 50px;
+      color: black;
+
+      .name {
+        font-size: 20px;
+        text-align: center;
+      }
+
+      .line {
+        border: none;
+        height: 2px;
+        background-color: #242128;
+        width: 200px;
+        justify-content: center;
+        align-items: center;
+        position: relative;
+      }
+    }
+
+  .git-hub-img {
+    grid-area: img2;
     width: 130px;
     height: 130px;
     border-radius: 100%;
     background-color: grey;
+    cursor: pointer;
     @include logo-git;
-    
   }
 
-  .anschreiben {
+  .git-hub-box {
+    grid-area: name2;
+    width: 380px;
+    height: 50px;
+    color: black;
+
+    .name {
+      font-size: 20px;
+      text-align: center;
+    }
+
+    .line {
+      border: none;
+      height: 2px;
+      background-color: #242128;
+      width: 200px;
+      justify-content: center;
+      align-items: center;
+      position: relative;
+    }
+  }
+
+  .anschreiben-img {
+    grid-area: img3;
     width: 130px;
     height: 130px;
     border-radius: 100%;
     background-color: grey;
+    cursor: pointer;
+    @include logo-anschreiben;
+  }
+
+  .anschreiben-box {
+    grid-area: name3;
+    width: 380px;
+    height: 50px;
+    color: black;
+
+    .name {
+      font-size: 20px;
+      text-align: center;
+    }
+
+    .line {
+      border: none;
+      height: 2px;
+      background-color: #242128;
+      width: 200px;
+      justify-content: center;
+      align-items: center;
+      position: relative;
+    }
+  }
+}
+
+.button-container{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  .about-me-button {
+    font-weight: 100;
+    font-size: 20px;
+    background-color: white;
+    color: #242128;
+
+    border: solid 1px;
+    border-color: #242128;
+    padding: 10px 25px 10px 25px;
+    cursor: pointer;
+
+    transition: 
+      background-color 0.3s,
+      color 0.3s,
+      font-size 0.5s,
+      padding 0.7s,
+      border 0.7s;
+  }
+
+  .about-me-button:hover {
+    background-color: #242128;
+    color: white;
+    font-size: 30px;
+    padding: 15px 50px 15px 50px;
+    border: none;
+  }
+
+  .about-me-button:active {
+    background-color: #505050;
+  }
+
+  .about-me-button:hover:active {
+    transition: none;
   }
 }

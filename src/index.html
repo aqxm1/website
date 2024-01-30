@@ -9,16 +9,16 @@
 
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@100;200;300;400;500&display=swap" rel="stylesheet">
 
     <link rel="stylesheet" href="./assets/styles/main.min.css">
     <script src="./assets/scripts/main.min.js" type="module"></script>
   </head>
   <body>
-    <div class="main-frame">
+    <div class="main-frame" id="app-container">
       <div class="head-bar">
         <div class="name-logo-container">
-          <h1>Adam Maksajdowski</h1>
+          <h1 class="logo-name">Adam Maksajdowski</h1>
           <div class="logo"></div>
         </div>
         <div class="menu"></div>
@@ -26,7 +26,10 @@
       <div class="dynamic-content">
         <router-outlet></router-outlet>
       </div>
-      <div class="footer-bar"></div>
+      <div class="footer-bar">
+        <div class="phone"></div>
+        <div class="email"></div>
+      </div>
     </div>
   </body>
 </html>

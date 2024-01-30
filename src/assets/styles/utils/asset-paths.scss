@@ -2,6 +2,10 @@ $logo: 'img/application_14078520.png';
 $menu: 'img/menu_8673660.png';
 $logo-hero: 'img/japan-illustration-japan-f5c864d006d1d3fb0ef186b72cf353e8.png';
 $logo-git: 'img/github-mark.png';
+$logo-lebenslauf: 'img/cv_8478721.png';
+$logo-anschreiben: 'img/document_88159.png';
+$logo-phone: 'img/smartphone-call_15874.png';
+$logo-email: 'img/open-mail_10732928.png';
 
 @mixin logo {
   background-image: url('#{$logo}');
@@ -28,5 +32,33 @@ $logo-git: 'img/github-mark.png';
   background-image: url('#{$logo-git}');
   background-repeat: no-repeat;
   background-size: 110%;
+  background-position: center center;
+}
+
+@mixin logo-lebenslauf {
+  background-image: url('#{$logo-lebenslauf}');
+  background-repeat: no-repeat;
+  background-size: 80%;
+  background-position: 8px center;
+}
+
+@mixin logo-anschreiben {
+  background-image: url('#{$logo-anschreiben}');
+  background-repeat: no-repeat;
+  background-size: 70%;
+  background-position: 30px center;
+}
+
+@mixin logo-phone {
+  background-image: url('#{$logo-phone}');
+  background-repeat: no-repeat;
+  background-size: contain;
+  background-position: center center;
+}
+
+@mixin logo-email {
+  background-image: url('#{$logo-email}');
+  background-repeat: no-repeat;
+  background-size: contain;
   background-position: center center;
 }

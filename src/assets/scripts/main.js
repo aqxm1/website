@@ -1,7 +1,7 @@
 import { Router } from './router/router.min.js';
 
 import Dashboard from '../../pages/dashboard/dashboard.min.js';
-import BlogPosts from '../../pages/blog-posts/blog-posts.min.js';
+import AboutMe from '../../pages/about-me/about-me.min.js';
 
 const router = new Router();
 
@@ -11,8 +11,8 @@ router.addRoute({
 });
 
 router.addRoute({
-  path: '/blog-posts',
-  component: BlogPosts,
+  path: '/about-me',
+  component: AboutMe,
 });
 
 router.start();
