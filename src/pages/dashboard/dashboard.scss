@@ -1,6 +1,7 @@
 @import '../../assets/styles/utils/asset-paths.scss';
 @import '../../assets/styles/utils/reset.scss';
-
+@import '../../assets/styles/form-elemts/buttons.scss';
+@import '../../assets/styles/utils/vars.scss';
 p {
   font-family: 'Montserrat', sans-serif;
 }
@@ -9,7 +10,7 @@ p {
   position: relative;
   width: 100%;
   height: 263px;
-  background-color: #242128;
+  background-color: $active-black;
   border-radius: 2px;
 
   display: flex;
@@ -59,16 +60,24 @@ p {
   width: 100%;
   height: 260px;
   margin-top: 30px;
-  background-color: lightblue;
 
   .lebenslauf-img {
     grid-area: img1;
     width: 130px;
     height: 130px;
     border-radius: 100%;
-    background-color: grey;
+    background-color: $grid-background-color;
+    transition: box-shadow 0.3s;
     cursor: pointer;
     @include logo-lebenslauf;
+
+      &:hover {
+        box-shadow: 0px 0px 10px 0px $active-black;
+      }
+
+      &:active {
+        box-shadow: 0px 0px 15px 1px $active-black;  //need to fix the transition
+      }
     }
 
     .lebenslauf-box {
@@ -85,7 +94,7 @@ p {
       .line {
         border: none;
         height: 2px;
-        background-color: #242128;
+        background-color: $active-black;
         width: 200px;
         justify-content: center;
         align-items: center;
@@ -98,16 +107,25 @@ p {
     width: 130px;
     height: 130px;
     border-radius: 100%;
-    background-color: grey;
+    background-color: $grid-background-color;
+    transition: box-shadow 0.3s;
     cursor: pointer;
     @include logo-git;
+
+    &:hover {
+      box-shadow: 0px 0px 5px 1px $active-black;
+    }
+
+    &:active {
+      box-shadow: 0px 0px 10px 2px $active-black;  //need to fix the transition
+    }
   }
 
   .git-hub-box {
     grid-area: name2;
     width: 380px;
     height: 50px;
-    color: black;
+    color: $active-black;
 
     .name {
       font-size: 20px;
@@ -117,7 +135,7 @@ p {
     .line {
       border: none;
       height: 2px;
-      background-color: #242128;
+      background-color: $active-black;
       width: 200px;
       justify-content: center;
       align-items: center;
@@ -130,16 +148,25 @@ p {
     width: 130px;
     height: 130px;
     border-radius: 100%;
-    background-color: grey;
+    background-color: $grid-background-color;
+    transition: box-shadow 0.3s;
     cursor: pointer;
     @include logo-anschreiben;
+
+    &:hover {
+      box-shadow: 0px 0px 10px 0px $active-black;
+    }
+
+    &:active {
+      box-shadow: 0px 0px 15px 1px $active-black;  //need to fix the transition
+    }
   }
 
   .anschreiben-box {
     grid-area: name3;
     width: 380px;
     height: 50px;
-    color: black;
+    color: $active-black;
 
     .name {
       font-size: 20px;
@@ -149,7 +176,7 @@ p {
     .line {
       border: none;
       height: 2px;
-      background-color: #242128;
+      background-color: $active-black;
       width: 200px;
       justify-content: center;
       align-items: center;
@@ -163,38 +190,5 @@ p {
   justify-content: center;
   align-items: center;
 
-  .about-me-button {
-    font-weight: 100;
-    font-size: 20px;
-    background-color: white;
-    color: #242128;
-
-    border: solid 1px;
-    border-color: #242128;
-    padding: 10px 25px 10px 25px;
-    cursor: pointer;
-
-    transition: 
-      background-color 0.3s,
-      color 0.3s,
-      font-size 0.5s,
-      padding 0.7s,
-      border 0.7s;
-  }
-
-  .about-me-button:hover {
-    background-color: #242128;
-    color: white;
-    font-size: 30px;
-    padding: 15px 50px 15px 50px;
-    border: none;
-  }
-
-  .about-me-button:active {
-    background-color: #505050;
-  }
-
-  .about-me-button:hover:active {
-    transition: none;
-  }
+  @include about-me-button;
 }

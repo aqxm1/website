@@ -1,49 +1,39 @@
 @import '../utils/vars.scss';
 
 
-@mixin get-button {
-  .get-button{
-    background-color: $active-violet;
-    color: white;
-    padding-top: 12.5px;
-    padding-bottom: 12.5px;
-    padding-left: 20.7px;
-    padding-right: 20.7px;
-    border: none;
-    border-radius: 4px;
-    font-size: 13px;
-    font-weight: bold;
-    cursor: pointer;
-    transition: background-color 0.15s;
-    vertical-align: top;
-
-    &:hover {
-      background-color: $active-violet-hover;
-    }
-  }
-}
-
-@mixin download-button {
-  .download-button{
+@mixin about-me-button {
+  .about-me-button {
+    font-weight: 100;
+    font-size: 20px;
     background-color: white;
-    color: grey;
-    padding-top: 11.5px;
-    padding-bottom: 11.5px;
-    padding-left: 20.7px;
-    padding-right: 20.7px;
-    border-style: solid;
-    border-radius: 4px;
-    border-width: 1px;
-    font-size: 13px;
-    font-weight: bold;
-    cursor: pointer;
-    margin-left: 10px;
-    vertical-align: top;
-    transition: background-color 0.15s, color 0.15s;
+    color: #242128;
 
-    &:hover {
-      background-color: grey;
-      color: white;
-    }
+    border: solid 1px;
+    border-color: $active-black;
+    padding: 10px 25px 10px 25px;
+    cursor: pointer;
+
+    transition: 
+      background-color 0.3s,
+      color 0.3s,
+      font-size 0.5s,
+      padding 0.7s,
+      border 0.7s;
+  }
+
+  .about-me-button:hover {
+    background-color: $active-black;
+    color: white;
+    font-size: 30px;
+    padding: 15px 50px 15px 50px;
+    border: none;
+  }
+
+  .about-me-button:active {
+    background-color: $active-grey-active;
+  }
+
+  .about-me-button:hover:active {
+    transition: none;
   }
 }
