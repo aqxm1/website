@@ -37,3 +37,26 @@
     transition: none;
   }
 }
+
+
+@mixin button-back-about-me {
+  .button-back-about-me{
+    background-color: $active-black;
+    color: white;
+    font-family: 'Montserrat', sans-serif;
+    padding: 20px 15px 20px 15px;
+    border: none;
+    border-radius: 2px;
+    transition: background-color 0.3s;
+    cursor: pointer;
+
+    &:hover {
+      background-color: $active-black-hover;
+    }
+
+    &:active {
+      background-color: $active-black-click;
+      transition: none;
+    }
+  }
+}
