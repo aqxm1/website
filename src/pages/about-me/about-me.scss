@@ -29,17 +29,6 @@
   }
 }
 
-
-.button-back-container {
-  display: flex;
-  justify-content: flex-start;
-  align-items: flex-start;
-
-  background-color: violet;
-
-  @include button-back-to-dashboard;
-}
-
 .about-me-parent-container {
   display: flex;
   align-items: center;

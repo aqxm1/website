@@ -109,6 +109,16 @@ body {
   .dynamic-content {
     position: relative;
     padding: 100px 60px 40px; // Removed unnecessary values
+
+    .button-back-container {
+      display: flex;
+      justify-content: flex-start;
+      align-items: flex-start;
+    
+      background-color: violet;
+    
+      @include button-back-to-dashboard;
+    }
   }
 
   .footer-bar {
