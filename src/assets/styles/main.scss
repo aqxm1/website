@@ -1,17 +1,25 @@
-@import './form-elemts/buttons.scss';
+// -------------------------- //
+// --- Main Sheet Imports --- //
+// -------------------------- //
+
 @import './utils/vars';
 @import './utils/asset-paths.scss';
+
+@import './utils/reset.scss'; // reset all basic css
+
+@import './form-elemts/buttons.scss';
+
 @import '../../pages/dashboard/dashboard.scss';
-@import './utils/reset.scss';
 @import '../../pages/about-me/about-me.scss';
 @import '../../pages/anschreiben/anschreiben.scss';
 @import '../../pages/lebenslauf/lebenslauf.scss';
 
+// -------------------------- //
 
 body {
   font-family: 'Montserrat', sans-serif;
-  margin: none !important;
-  padding: none !important;
+  margin: 0; // Change from none to 0
+  padding: 0; // Change from none to 0
 }
 
 #app-container {
@@ -24,18 +32,73 @@ body {
   .head-bar {
     position: fixed;
     width: 100%;
-    padding: 0 60px 0 60px;
+    padding: 0 60px; // Removed unnecessary values
     height: 80px;
     background-color: white;
     z-index: 9999;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    .name-logo-container {
+      display: flex;
+      align-items: center;
+
+      .logo-name {
+        font-weight: 400;
+        font-size: 25px;
+        color: $active-black;
+        margin-right: 8px;
+        margin-left: 10px;
+      }
+
+      .logo {
+        margin-left: 8px;
+        width: 30px;
+        height: 30px;
+        @include logo;
+      }
+    }
+
+    .menu-container {
+      .menu {
+        width: 30px;
+        height: 30px;
+        cursor: pointer;
+        @include menu-icon;
+      }
+
+      .dropdown {
+        display: none;
+        position: absolute;
+        top: calc(100% + 5px); // Position dropdown below the menu
+        left: 0;
+        background-color: #333;
+        padding: 10px;
+        list-style: none;
+      }
+
+      .dropdown li {
+        padding: 5px 0;
+      }
+
+      .dropdown li a {
+        color: #fff;
+        text-decoration: none;
+      }
+
+      &:hover .dropdown {
+        display: block; // Show dropdown on hover
+      }
+    }
   }
 
   .dynamic-content {
     position: relative;
-    padding: 100px 60px 40px 60px; 
+    padding: 100px 60px 40px; // Removed unnecessary values
   }
 
-  #FooterBar {
+  .footer-bar {
     position: fixed;
     bottom: 0;
     left: 0;
@@ -54,113 +117,45 @@ body {
       opacity: 1;
       visibility: visible;
     }
-  }
-}
 
-.head-bar {
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  flex-direction: row;
-  background-color: white;
-
-  .name-logo-container {
     display: flex;
     align-items: center;
+    justify-content: space-between;
 
-    h1.logo-name {
-      font-weight: 400;
-      font-size: 25px;
-      color: $active-black;
-      margin-right: 8px;
-      margin-left: 10px;
+    .logo-phone-container {
+      display: flex;
+      align-items: center;
+
+      .phone-logo {
+        width: 30px;
+        height: 30px;
+        margin-left: 30px;
+        @include logo-phone;
+      }
+
+      .phone-number {
+        margin-left: 5px;
+        text-decoration: underline;
+        color: $active-black;
+      }
     }
 
-    .logo {
-      margin-left: 8px;
-      width: 30px;
-      height: 30px;
-      @include logo;
-    }
-  }
+    .email-logo-container {
+      display: flex;
+      align-items: center;
 
-  .menu {
-    display: flex;
-    align-items: center;
-    width: 30px;
-    height: 30px;
-    margin-right: 100px; //need to fix
-    cursor: pointer;
-    @include menu-icon;
-  }
+      .email-adress {
+        margin-right: 10px;
+        text-decoration: underline;
+        color: $active-black;
+      }
 
-  .menu-icon {
-    cursor: pointer;
-  }
-
-  .dropdown {
-    display: none;
-    position: absolute;
-    top: calc(100% + 5px); // Position dropdown below the menu
-    left: 0;
-    background-color: #333;
-    padding: 10px;
-    list-style: none;
-  }
-
-  .dropdown li {
-    padding: 5px 0;
-  }
-
-  .dropdown li a {
-    color: #fff;
-    text-decoration: none;
-  }
-  
-  &:hover .dropdown {
-    display: block; // Show dropdown on hover
-  }
-}
-
-.footer-bar {
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-
-  .logo-phone-container {
-    display: flex;
-    align-items: center;
-
-    .phone-logo {
-      width: 30px;
-      height: 30px;
-      margin-left: 30px;
-      @include logo-phone;
-    }
-
-    .phone-number {
-      margin-left: 5px;
-      text-decoration: underline;
-      color: $active-black;
-    }
-  }
-
-  .email-logo-container {
-    display: flex;
-    align-items: center;
-
-    .email-adress {
-      margin-right: 10px;
-      text-decoration: underline;
-      color: $active-black;
-    }
-
-    .email-logo {
-      width: 30px;
-      height: 30px;
-      margin-right: 30px;
-      @include logo-email;
+      .email-logo {
+        width: 30px;
+        height: 30px;
+        margin-right: 30px;
+        @include logo-email;
+      }
     }
   }
 }
-
