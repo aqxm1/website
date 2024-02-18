@@ -1,5 +1,5 @@
 $logo: 'img/application_14078520.png';
-$menu: 'img/menu_8673660.png';
+$menu-icon: 'img/menu_8673660.png';
 $logo-hero: 'img/japan-illustration-japan-f5c864d006d1d3fb0ef186b72cf353e8.png';
 $logo-git: 'img/github-mark.png';
 $logo-lebenslauf: 'img/cv_8478721.png';
@@ -14,8 +14,8 @@ $logo-email: 'img/open-mail_10732928.png';
   background-position: center center;
 }
 
-@mixin menu {
-  background-image: url('#{$menu}');
+@mixin menu-icon {
+  background-image: url('#{$menu-icon}');
   background-repeat: no-repeat;
   background-size: contain;
   background-position: center center;

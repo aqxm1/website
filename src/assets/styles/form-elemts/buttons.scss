@@ -39,14 +39,13 @@
 }
 
 
-@mixin button-back-about-me {
-  .button-back-about-me{
+@mixin button-back-to-dashboard {
+  .button-back-to-dashboard{
     background-color: $active-black;
     color: white;
     font-family: 'Montserrat', sans-serif;
     padding: 20px 15px 20px 15px;
     border: none;
-    border-radius: 2px;
     transition: background-color 0.3s;
     cursor: pointer;
 

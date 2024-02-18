@@ -14,6 +14,7 @@
     <link rel="stylesheet" href="./assets/styles/main.min.css">
     <script src="./assets/scripts/main.min.js" type="module"></script>
     <script src="./assets/scripts/scrolling/scroll.min.js" type="module"></script>
+    <script src="./assets/scripts/menu/menu.min.js" type="module"></script>
   </head>
   <body>
     <div class="main-frame" id="app-container">
@@ -22,7 +23,16 @@
           <h1 class="logo-name">Adam Maksajdowski</h1>
           <div class="logo"></div>
         </div>
-        <div class="menu"></div>
+        <div class="menu-container">
+          <nav class="dropdown">
+            <ul>
+              <li><a href="#/">Home</a></li>
+              <li><a href="#/about-me">About Me</a></li>
+              <li><a href="#/lebenslauf">Lebenslauf</a></li>
+              <li><a href="#/anschreiben">Anschreiben</a></li>
+            </ul>
+          </nav>
+        </div>
       </div>
       <div class="dynamic-content">
         <router-outlet></router-outlet>

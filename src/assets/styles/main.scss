@@ -4,6 +4,8 @@
 @import '../../pages/dashboard/dashboard.scss';
 @import './utils/reset.scss';
 @import '../../pages/about-me/about-me.scss';
+@import '../../pages/anschreiben/anschreiben.scss';
+@import '../../pages/lebenslauf/lebenslauf.scss';
 
 
 body {
@@ -88,7 +90,35 @@ body {
     width: 30px;
     height: 30px;
     margin-right: 100px; //need to fix
-    @include menu;
+    cursor: pointer;
+    @include menu-icon;
+  }
+
+  .menu-icon {
+    cursor: pointer;
+  }
+
+  .dropdown {
+    display: none;
+    position: absolute;
+    top: calc(100% + 5px); // Position dropdown below the menu
+    left: 0;
+    background-color: #333;
+    padding: 10px;
+    list-style: none;
+  }
+
+  .dropdown li {
+    padding: 5px 0;
+  }
+
+  .dropdown li a {
+    color: #fff;
+    text-decoration: none;
+  }
+  
+  &:hover .dropdown {
+    display: block; // Show dropdown on hover
   }
 }
 
