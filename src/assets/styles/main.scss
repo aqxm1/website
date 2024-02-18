@@ -18,8 +18,8 @@
 
 body {
   font-family: 'Montserrat', sans-serif;
-  margin: 0; // Change from none to 0
-  padding: 0; // Change from none to 0
+  margin: 0; 
+  padding: 0;
 }
 
 #app-container {
@@ -32,7 +32,6 @@ body {
   .head-bar {
     position: fixed;
     width: 100%;
-    padding: 0 60px; // Removed unnecessary values
     height: 80px;
     background-color: white;
     z-index: 9998;
@@ -43,6 +42,7 @@ body {
     .name-logo-container {
       display: flex;
       align-items: center;
+      margin-left: 60px;
 
       .logo-name {
         font-weight: 400;
@@ -62,12 +62,14 @@ body {
 
     .menu-container {
       display: flex;
+      margin-right: 60px;
       position: relative;
 
       .drop-button {
         width: 30px;
         height: 30px;
         cursor: pointer;
+        border: none;
         @include menu-icon;
       }
 
@@ -76,9 +78,31 @@ body {
         position: absolute;
         min-width: 160px;
         z-index: 9999;
-      }
+        background-color: $active-grey-active;
 
-      .menu-container:hover .drop-content {display: block;}
+        a {
+          color: white;
+          padding-top: 10px;
+          padding-bottom: 10px;
+          text-decoration: none;
+
+          &:hover {
+            background-color: $menu-background-hover;
+          }
+
+          &:active {
+            background-color: $menu-background-active;
+          }
+        }
+      }
+    }
+
+    .menu-container:hover .drop-content {
+      display: flex; 
+      flex-direction: column;
+      top: 30px;
+      right: 0;
+      text-align: center;
     }
   }
 
