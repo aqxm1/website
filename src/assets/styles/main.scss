@@ -35,7 +35,7 @@ body {
     padding: 0 60px; // Removed unnecessary values
     height: 80px;
     background-color: white;
-    z-index: 9999;
+    z-index: 9998;
     display: flex;
     align-items: center;
     justify-content: space-between;
@@ -61,35 +61,24 @@ body {
     }
 
     .menu-container {
-      .menu {
+      display: flex;
+      position: relative;
+
+      .drop-button {
         width: 30px;
         height: 30px;
         cursor: pointer;
         @include menu-icon;
       }
 
-      .dropdown {
+      .drop-content {
         display: none;
         position: absolute;
-        top: calc(100% + 5px); // Position dropdown below the menu
-        left: 0;
-        background-color: #333;
-        padding: 10px;
-        list-style: none;
+        min-width: 160px;
+        z-index: 9999;
       }
 
-      .dropdown li {
-        padding: 5px 0;
-      }
-
-      .dropdown li a {
-        color: #fff;
-        text-decoration: none;
-      }
-
-      &:hover .dropdown {
-        display: block; // Show dropdown on hover
-      }
+      .menu-container:hover .drop-content {display: block;}
     }
   }
 
