@@ -3,35 +3,6 @@
 @import '../../assets/styles/form-elemts/buttons.scss';
 @import '../../assets/styles/utils/vars.scss';
 
-.anschreiben-header-container {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-
-  width: 100%;
-  height: 100px;
-  
-  background-color: lightblue;
-
-  .anschreiben-header {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-
-    background-color: $active-black;
-    color: white;
-
-    font-size: 30px;
-    width: 300px;
-    height: 100px;
-    
-    border: none;
-  }
-}
-
-.anschreiben-parent-container {
-  display: flex;
-  align-items: center;
 
   .anschreiben-container{
     order: 1;
@@ -40,12 +11,10 @@
     width: 100%;
     height: 500px;
 
-    background-color: lightpink;
-    margin-right: 20px;
-  
     .text-anschreiben {
       font-size: 25px;
       line-height: 1.4;
+      text-align: justify;
     }
   }
 
@@ -60,7 +29,6 @@
 
     background-color: $grid-background-color;
 
-    margin-left: 20px;
-    margin-bottom: 30px;
+    margin-left: 45px;
+    margin-bottom: 40px;
   }
-}

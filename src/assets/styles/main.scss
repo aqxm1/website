@@ -110,14 +110,46 @@ body {
     position: relative;
     padding: 100px 60px 40px; // Removed unnecessary values
 
-    .button-back-container {
-      display: flex;
-      justify-content: flex-start;
-      align-items: flex-start;
-    
-      background-color: violet;
-    
-      @include button-back-to-dashboard;
+    .sub-page {
+
+      .button-back-container {
+        display: flex;
+        justify-content: flex-start;
+        align-items: flex-start;
+      
+        @include button-back-to-dashboard;
+      }
+
+      .sub-page-header {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+
+        
+        height: 100px;
+        margin-bottom: 30px;
+
+        .sub-page-headline {
+          display: flex;
+          justify-content: center;
+          align-items: center;
+
+          background-color: $active-black;
+          color: white;
+
+          font-size: 30px;
+          width: 300px;
+          height: 100px;
+
+          border: none;
+        }
+      }
+
+      .sub-page-content {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+      }
     }
   }
 
