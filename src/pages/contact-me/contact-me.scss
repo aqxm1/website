@@ -4,21 +4,23 @@
 @import '../../assets/styles/utils/vars.scss';
 
 
-  .anschreiben-container{
+  .text-container{
     order: 1;
     flex-grow: 1;
 
     width: 100%;
-    height: 500px;
+    height: 1000px;
 
-    .text-anschreiben {
+    margin-right: 20px;
+  
+    .text-about-me {
       font-size: 25px;
       line-height: 1.4;
       text-align: justify;
     }
   }
 
-  .img-anschreiben{
+  .img-about-me{
     order: 2;
     flex-shrink: 0;
     float: right;
@@ -28,7 +30,7 @@
     border-radius: 100%;
 
     background-color: $grid-background-color;
-
-    margin-left: 45px;
-    margin-bottom: 40px;
+    margin-top: 80px;
+    margin-left: 20px;
+    margin-bottom: 5px;
   }
