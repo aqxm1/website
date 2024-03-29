@@ -1,3 +1,9 @@
+//===========================================//
+//                                           //
+//             --=All Assets=--              //
+//                                           //
+//===========================================//
+
 $logo: 'img/application_14078520.png';
 $menu-icon: 'img/menu_8673660.png';
 $logo-hero: 'img/japan-illustration-japan-f5c864d006d1d3fb0ef186b72cf353e8.png';
@@ -6,6 +12,7 @@ $logo-lebenslauf: 'img/cv_8478721.png';
 $logo-anschreiben: 'img/document_88159.png';
 $logo-phone: 'img/smartphone-call_15874.png';
 $logo-email: 'img/open-mail_10732928.png';
+$img-adam: 'img/IMG_3621.jpg';
 
 @mixin logo {
   background-image: url('#{$logo}');
@@ -61,4 +68,12 @@ $logo-email: 'img/open-mail_10732928.png';
   background-repeat: no-repeat;
   background-size: contain;
   background-position: center center;
+}
+
+@mixin img-adam {
+  background-image: url('#{$img-adam}');
+  background-repeat: no-repeat;
+  background-size: 100%;
+  background-position: center center;
+  
 }

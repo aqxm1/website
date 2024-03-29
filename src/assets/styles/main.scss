@@ -1,6 +1,8 @@
-// -------------------------- //
-// --- Main Sheet Imports --- //
-// -------------------------- //
+//===========================================//
+//                                           //
+//          --=Main sheet imports=--         //
+//                                           //
+//===========================================//
 
 @import './utils/vars';
 @import './utils/asset-paths.scss';
@@ -11,10 +13,15 @@
 
 @import '../../pages/dashboard/dashboard.scss';
 @import '../../pages/about-me/about-me.scss';
-@import '../../pages/contact-me/contact-me.scss';
 @import '../../pages/lebenslauf/lebenslauf.scss';
 
-// -------------------------- //
+//===========================================//
+
+//===========================================//
+//                                           //
+//           --=Main SCSS Styling=--         //
+//                                           //
+//===========================================//
 
 body {
   font-family: 'Montserrat', sans-serif;
@@ -108,7 +115,7 @@ body {
 
   .dynamic-content {
     position: relative;
-    padding: 100px 60px 40px; // Removed unnecessary values
+    padding: 100px 60px 40px;
 
     .sub-page {
 
