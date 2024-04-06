@@ -1,42 +1,20 @@
+//===========================================//
+//                                           //
+//               --=Imports=--               //
+//                                           //
+//===========================================//
+
 @import '../utils/vars.scss';
 
+//===========================================//
 
-@mixin contact-me-button {
-  .contact-me-button {
-    font-weight: 100;
-    font-size: 20px;
-    background-color: white;
-    color: #242128;
 
-    border: solid 1px;
-    border-color: $active-black;
-    padding: 10px 25px 10px 25px;
-    cursor: pointer;
+//===========================================//
+//                                           //
+//           --=Button styling=--            //
+//                                           //
+//===========================================//
 
-    transition: 
-      background-color 0.3s,
-      color 0.3s,
-      font-size 0.5s,
-      padding 0.7s,
-      border 0.7s;
-  }
-
-  .contact-me-button:hover {
-    background-color: $active-black;
-    color: white;
-    font-size: 30px;
-    padding: 15px 50px 15px 50px;
-    border: none;
-  }
-
-  .contact-me-button:active {
-    background-color: $active-grey-active;
-  }
-
-  .contact-me-button:hover:active {
-    transition: none;
-  }
-}
 
 
 @mixin button-back-to-dashboard {
